@@ -6,8 +6,8 @@ public class Exercises {
         //Passing Primitives by Value to Methods
         int value = 1;
         System.out.println("Argument: value = " + value);
-        exercises.addTwo(value);
-        System.out.println("After method call: value = " + value);
+        exercises.addTwo(value); // 3
+        System.out.println("After method call: value = " + value); // ATTENTION: 1
 
     }
 
