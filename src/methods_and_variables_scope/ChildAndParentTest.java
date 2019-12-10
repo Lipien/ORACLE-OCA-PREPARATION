@@ -7,5 +7,11 @@ public class ChildAndParentTest {
 
         ChildClass childClass = new ChildClass();
         System.out.println(childClass.className());
+        int j;
+        for (j = 0; j <19; ){
+            j++;
+            ++j;
+        }
+        System.out.println(j);
     }
 }
