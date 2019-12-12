@@ -8,11 +8,14 @@ import java.util.stream.DoubleStream;
 
 public class ArraysExercises {
     public static void main(String[] args) {
-        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+        int[] arry = new int[0];
+        System.out.println(arry.length);
+        int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
         for (int i = 0; i < myNumbers.length; ++i) {
-            for(int j = 0; j < myNumbers[i].length; ++j) {
+            for (int j = 0; j < myNumbers[i].length; ++j) {
                 System.out.println(myNumbers[i][j]);
             }
+            System.out.println(myNumbers.length);
         }
 
         int[][] square = new int[2][];
@@ -20,13 +23,13 @@ public class ArraysExercises {
         square[1] = new int[3];
 
         int[][] square1 = new int[3][3];
-        for(int i=0;i<3;i++){
+        for (int i = 0; i < 3; i++) {
             square1[i][i] = 5;
         }
-        int sum1=0;
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                sum1+=square1[i][j];
+        int sum1 = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                sum1 += square1[i][j];
             }
         }
         System.out.println(sum1);
@@ -39,7 +42,7 @@ public class ArraysExercises {
         System.out.println(Arrays.toString(toString));
 
 
-        int[] numbers2 = new int[] {42, 55, 99};
+        int[] numbers2 = new int[]{42, 55, 99};
 
         int[][][] threeDArray = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}, {{9, 10}, {11, 12}}};
 
