@@ -2,6 +2,7 @@ package lambdas.water_sort;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class WaterApp {
@@ -31,7 +32,12 @@ public class WaterApp {
 // Without Sort
         System.out.println("Not Sorted: " + waterList);
 // With Sort
-        WaterSort waterSort = new WaterSort();
+        Comparator<Water> waterSort = new Comparator<Water>() {
+            @Override
+            public int compare(Water w1, Water w2) {
+                return w1.getSource().compareTo(w2.getSource());
+            }
+        };
         Collections.sort(waterList, waterSort);
         System.out.println("Sorted: " + waterList);
     }
