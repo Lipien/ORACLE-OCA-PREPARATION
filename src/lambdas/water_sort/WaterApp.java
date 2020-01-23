@@ -32,12 +32,14 @@ public class WaterApp {
 // Without Sort
         System.out.println("Not Sorted: " + waterList);
 // With Sort
-        Comparator<Water> waterSort = new Comparator<Water>() {
-            @Override
-            public int compare(Water w1, Water w2) {
-                return w1.getSource().compareTo(w2.getSource());
-            }
-        };
+        // Commenting out Anonymous inner class for λE use
+        // Comparator <Water> waterSort = new Comparator <Water> () {
+        // @Override
+        // public int compare (Water w1, Water w2) {
+        // return w1.getSource().compareTo(w2.getSource());
+        // }
+        // };
+        Comparator<Water> waterSort = Comparator.comparing(Water::getSource);
         Collections.sort(waterList, waterSort);
         System.out.println("Sorted: " + waterList);
     }
