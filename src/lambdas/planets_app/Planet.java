@@ -1,4 +1,4 @@
-package lambdas;
+package lambdas.planets_app;
 
 import javafx.scene.paint.Color;
 

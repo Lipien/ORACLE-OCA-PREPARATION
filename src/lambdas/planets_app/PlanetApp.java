@@ -1,11 +1,11 @@
-package lambdas;
+package lambdas.planets_app;
 
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static lambdas.PlanetPredicates.*;
+import static lambdas.planets_app.PlanetPredicates.*;
 
 public class PlanetApp {
     public static void main(String[] args) {
