@@ -17,6 +17,7 @@ public class PlanetApp {
         Planet saturn = new Planet("Saturn", Color.ORANGE, 62, true);
         Planet uranus = new Planet("Uranus", Color.TEAL, 27, true);
         Planet neptune = new Planet("Neptune", Color.BLUE, 14, true);
+
         List<Planet> planetList = new ArrayList<>();
         planetList.add(mercury);
         planetList.add(venus);
@@ -26,19 +27,24 @@ public class PlanetApp {
         planetList.add(saturn);
         planetList.add(uranus);
         planetList.add(neptune);
-// SCENARIO 1 - Which planets have rings?
+
+        // SCENARIO 1 - Which planets have rings?
         System.out.println("Has one or more rings: " + listFilteredPlanets(planetList, (Planet p) -> p.isRinged()));
-// SCENARIO 2 - Which planets are blue and have moons?
+
+        // SCENARIO 2 - Which planets are blue and have moons?
         System.out.print("Has moons and is blue: ");
         planetList.stream().filter(p -> p.getNumberOfMoons() > 0
                 & (p.getPrimaryColor() == Color.BLUE)).forEach(s -> System.out.print(s + " ")
         );
-// SCENARIO 3 - Which planets have more than twenty moons?
+
+        // SCENARIO 3 - Which planets have more than twenty moons?
         System.out.println("\nHas over twenty moons: " + filterPlanets(planetList, hasMoonsMoreThan(20)));
-// SCENARIO 4 - Which planet has a color (other than black)
+
+        // SCENARIO 4 - Which planet has a color (other than black)
         System.out.print("Has a color not black: ");
         planetList.stream().filter(hasAColor()).forEach(s -> System.out.print(s + " "));
-// SCENARIO 5 - Which planets have moons?
+
+        // SCENARIO 5 - Which planets have moons?
         planetList.removeIf((Planet p) -> {
             return (p.getNumberOfMoons() == 0);
         });
